@@ -1,0 +1,6 @@
+*.py
+/.vscode/*.*
+sample/*.*
+*.exe
+desktop.ini
+
