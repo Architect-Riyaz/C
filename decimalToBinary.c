@@ -1,17 +1,15 @@
-#include<stdio.h>
-int main(){
-    int userInput,revBinaryForm=0,binaryForm=0;
+#include <stdio.h>
+int main()
+{
+    int userInput, rem,i=1, binaryForm = 0;
     printf("Enter a decimal number to find it's binary form:");
-    scanf("%d",&userInput);
-    for(int i = userInput; i != 1; i/=2){
-        revBinaryForm *=10;
-        revBinaryForm += i%2;
+    scanf("%d", &userInput);
+
+    while(userInput !=0){
+        rem = userInput%2;
+        userInput /=2;
+        binaryForm+=rem*i;
+        i*=10;
     }
-    revBinaryForm *=10;
-    revBinaryForm ++;
-    for(int i = revBinaryForm;i > 0;i /= 10){
-        binaryForm *=10;
-        binaryForm += i%10;
-    }
-    printf("%d",binaryForm);
+    printf("%d", binaryForm);
 }
